@@ -1,6 +1,8 @@
 <launch>
   <!-- Launch gazebo simulation -->
-  <include file="$(find ur3_sim_gazebo)/launch/ur3_sim.launch"/>
+  <include file="$(find ur3_sim_gazebo)/launch/ur3_sim.launch">
+    <arg name="gui" value="true"/>
+  </include>
 
   <!-- Launch MoveIt!-->
   <include file="$(find ur3_sim_moveit_config)/launch/ur3_sim_moveit_planning_execution.launch"/>
